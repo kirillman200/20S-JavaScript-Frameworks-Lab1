@@ -27,6 +27,35 @@
     Create an array that contains 4 people objects.
     Each object must have at least 2 properties.
 */
+//array with people objects
+const peopleObjArray = [
+
+  {
+    name: 'Kiril',
+    age: 19,
+    favouriteMovie: 'I-Origin'
+
+  },
+  {
+    name: 'Vlad',
+    age: 22,
+    favouriteMovie: 'Steve Jobs(2015)'
+  },
+  {
+    name: 'Yana',
+    age: 23,
+    favouriteMovie: 'Titanic'
+  },
+  {
+    name: 'Igor',
+    age: 45,
+    favouriteMovie: 'The Matrix'
+  }
+
+
+]
+// destructuring objects in array
+const destructuredObj = { name, age, favouriteMovie } = peopleObjArray;
 
 
 /*
@@ -38,6 +67,10 @@
     destructured.
 */
 
+//arrow function
+const arrowFunc = ({ name, age, favouriteMovie }) => {
+  console.log(`Hello, my name is ${name} I'm ${age} years old and my favourite movie is - ${favouriteMovie}`);
+};
 
 /*
   Step 3 (3 points):
@@ -45,3 +78,9 @@
     Call your arrow function passing the array item
     as an argument.
 */
+// loop which is cyclyng throght the array
+for (let person of peopleObjArray) {
+  arrowFunc(person);
+
+}
+
